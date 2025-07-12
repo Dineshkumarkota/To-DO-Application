@@ -1,13 +1,13 @@
 body {
   font-family: sans-serif;
 }
-.task-container {
-  display: flex;
-  justify-content: space-between;
-}
+
 li {
   list-style-type: none;
 }
 ul {
   background-color: aquamarine;
+}
+input[type="checkbox"]:checked {
+  text-decoration: line-through;
 }

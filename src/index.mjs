@@ -16,8 +16,6 @@ function AddTask(task) {
     taskItem.innerHTML = `<input type="checkbox"/> ${item}  <button id="remove">Remove</button>`;
   });
   console.log(taskList);
-  let removeBtn = document.getElementById("remove");
-  removeBtn.addEventListener("click", removeTask);
 
   textInput.value = "";
 
@@ -37,6 +35,8 @@ function deadline() {
 }
 
 btn.addEventListener("click", deadline);
+let removeBtn = document.getElementById("remove");
+removeBtn.addEventListener("click", removeTask);
 
 function removeTask(task) {
   taskList.split(task, 1);
