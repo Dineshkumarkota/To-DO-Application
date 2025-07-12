@@ -1,6 +1,7 @@
 let textInput = document.getElementById("text");
 let btn = document.getElementById("btn");
 let unordered = document.getElementById("unordered");
+let saveBtn = document.getElementById("saveBtn");
 
 let dateInput = document.getElementById("date");
 let taskList = [];
@@ -40,3 +41,7 @@ btn.addEventListener("click", deadline);
 function removeTask(task) {
   taskList.split(task, 1);
 }
+function save() {
+  localStorage.setItem("taskName", taskList);
+}
+saveBtn.addEventListener("click", save);
